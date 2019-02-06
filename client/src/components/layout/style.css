@@ -381,7 +381,7 @@ body {
 
 .hero-2 {
 	padding: 100px 0 100px 0 !important;
-	background: #FFFFFF;
+	/* background: #FFFFFF; */
 	background: #252b33;
 	background-size: cover;
 }

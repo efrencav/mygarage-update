@@ -3,7 +3,7 @@ import LandingPageMenu from "../components/layout/SectionMenu";
 import SectionHeroHome from "../components/layout/SectionHeroHome";
 import SectionServices from "../components/layout/SectionServices";
 import SectionWhyHome from "../components/layout/SectionWhyHome";
-import SectionFooter from "../components/layout/SectionFooter";
+import SectionFooter from "../components/layout/SectionWhyHome";
 
 
 

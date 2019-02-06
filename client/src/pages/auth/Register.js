@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
 import { Container, Button, Form, Label, Input, Col, Row } from "reactstrap";
+import SectionHeaderHome from "../../components/layout/SectionHeaderHome";
 
 
 class Register extends Component {
@@ -55,9 +56,10 @@ class Register extends Component {
     const { errors } = this.state;
 
     return (
-      <Container>
+      <SectionHeaderHome>
+      <Container className="hero-img">
         <Row style={{ marginTop: "4rem" }}>
-          <Col md="8">
+          <Col md="8" className="signup-form">
             <Link to="/" className="btn-flat waves-effect">
               <i className="fa-long-arrow-left"></i> Back to
               home
@@ -145,6 +147,7 @@ class Register extends Component {
           </Col>
         </Row>
       </Container>
+      </SectionHeaderHome>
     );
   }
 }
