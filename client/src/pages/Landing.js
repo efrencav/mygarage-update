@@ -2,6 +2,10 @@ import React, { Component, Fragment } from "react";
 import LandingPageMenu from "../components/layout/SectionMenu";
 import SectionHeroHome from "../components/layout/SectionHeroHome";
 import SectionServices from "../components/layout/SectionServices";
+import SectionWhyHome from "../components/layout/SectionWhyHome";
+import SectionFooter from "../components/layout/SectionFooter";
+
+
 
 
 // import { Link } from "react-router-dom";
@@ -15,6 +19,8 @@ class Landing extends Component {
       <LandingPageMenu />
       <SectionHeroHome />
       <SectionServices />
+      <SectionWhyHome />
+      <SectionFooter />
       </Fragment>
     );
   }
