@@ -1,5 +1,5 @@
 import React from "react";
-import { ListGroup, ListGroupItem, Badge, div } from 'reactstrap';
+import { Badge, Col } from 'reactstrap';
 import "./style.css";
 
 
@@ -15,11 +15,11 @@ export default class SectionFooter extends React.Component {
                 <div className="col-md-4">
                   <h6>&copy; MyGarage 2019 Rights Reserved</h6>
                 </div>
-                <div className="col-md-4">
+                <Col md="4">
                     <Badge color="light" href="#">Facebook</Badge>
                     <Badge color="light" href="#">Twitter</Badge>
                     <Badge color="light" href="#">Instagram</Badge>
-                </div>
+                </Col>
               </div>
             </div>
           </div>

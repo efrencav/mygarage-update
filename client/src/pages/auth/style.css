@@ -112,7 +112,7 @@ body {
 }
 
 .bg-color {
-	background: #f8faff !important;
+	background: #364655 !important;
 }
 
 #loading {
@@ -501,6 +501,9 @@ body {
 }
 
 .signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"],
+
 .signup-form textarea,
 .signup-form textarea.form-control {
 	height: 45px;
@@ -2502,4 +2505,8 @@ textarea.form-control {
 	.form .submit-button {
     margin-left: 5px;
 }
+}
+
+.padding-top-150-px {
+    padding-top: 150px;
 }
