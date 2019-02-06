@@ -57,10 +57,10 @@ class Login extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="container-b">
-      <Container>
-        <Row style={{ marginTop: "4rem" }}>
-          <Col md="8">
+      <Container className="hero-img">
+        <div className="form-group">
+        <Row className="padding-top-150-px">
+          <Col md="8" className="signup-form">
             <Link to="/" className="btn-flat waves-effect">
               <i className="fa-long-arrow-left"></i> Back to
               home
@@ -125,8 +125,8 @@ class Login extends Component {
             </Form>
           </Col>
         </Row>
-        </Container>
         </div>
+        </Container>
     );
   }
 }
