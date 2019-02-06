@@ -1,0 +1,82 @@
+
+/*------ Navbar Styling ------*/
+
+.navbar {
+  font-family: "Montserrat";
+	padding-top: 25px;
+	padding-bottom: 25px;
+	background-color: transparent !important;
+	-webkit-transition: 0.5s all ease;
+	transition: 0.5s all ease;
+}
+
+.navbar .navbar-brand span {
+	font-family: 'Montserrat';
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 0;
+	color: #00eaff !important;
+	vertical-align: middle;
+}
+
+.navbar .navbar-brand img {
+	vertical-align: middle;
+	margin-right: 0.3em;
+}
+
+.navbar .navbar-toggler {
+	border: none;
+}
+
+.navbar span.navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar span.navbar-toggler-icon::before {
+	outline: none;
+}
+
+.navbar .navbar-toggler:focus {
+	outline: none;
+}
+
+.navbar-nav {
+	text-align: center;
+	margin-top: 15px;
+	-webkit-transition: 0.5s all ease; /* For Safari 3.1 to 6.0 */
+	transition: 0.5s all ease;
+}
+
+.navbar-nav .nav-item {
+	margin-right: 0;
+	margin-top: 1.5rem;
+	font-size: 0.85rem;
+	font-weight: 400;
+  text-transform: capitalize;
+  color: #563D7C;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #364655;
+	font-weight: 600;
+}
+
+.nav-white .nav-item .nav-link {
+	font-size: 0.92rem;
+	text-transform: capitalize;
+  color: #FFFFFF;
+}
+
+.nav-white .nav-item .nav-link:hover {
+  color: #00eaff;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.nav-white .nav-item .nav-link:focus {
+	color: #00eaff;
+}
+
+.nav-white .navbar-brand {
+	color: #FFFFFF;
+}
