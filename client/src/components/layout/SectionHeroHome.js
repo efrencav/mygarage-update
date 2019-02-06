@@ -1,13 +1,60 @@
-import React from "react";
-// import { NavLink } from "react-router-dom";
-import { Button, Form, FormGroup, Label, Input } from "reactstrap";
-// import { Colxx } from "components/CustomBootstrap";
-import "./style.css";
+import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { registerUser } from "../../actions/authActions";
+import classnames from "classnames";
+import {  Button, Form, Label, Input, FormGroup } from "reactstrap";
 
 
-export default class SectionHeroHome extends React.Component {
-    render() {
-        return(
+class Register extends Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "",
+      email: "",
+      password: "",
+      password2: "",
+      errors: {}
+    };
+  }
+
+  componentDidMount() {
+    // If logged in and user navigates to Register page, should redirect them to dashboard
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push("/home");
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors) {
+      this.setState({
+        errors: nextProps.errors
+      });
+    }
+  }
+
+  onChange = e => {
+    this.setState({ [e.target.id]: e.target.value });
+  };
+
+  onSubmit = e => {
+    e.preventDefault();
+
+    const newUser = {
+      name: this.state.name,
+      email: this.state.email,
+      password: this.state.password,
+      password2: this.state.password2
+    };
+
+    this.props.registerUser(newUser, this.props.history);
+  };
+
+  render() {
+    const { errors } = this.state;
+
+    return(
             <div className="hero-home hero-2">
                     <div className="container-m">
                         <div className="app-hero">
@@ -17,34 +64,30 @@ export default class SectionHeroHome extends React.Component {
                                 {/* <p>Best in class will render your huge chunks into
                                 meaningful data. Login to the app now.</p> */}
                             </div>
-                                <div className="hero-img">
-                            <div className="signup-form">
-                                <h1>Register for free</h1>
-                            <Form action="#" method="post" className="registration-form">
-                                <FormGroup>
-                                    <Label className="sr-only" for="form-name">First name</Label>
-                                        <Input type="text" name="form-name" placeholder="Enter Your Name..." className="form-name form-control" id="form-name" />
-                                </FormGroup>
-                                <FormGroup>
-                                    <Label className="sr-only" for="form-email">Email</Label>
-                                        <Input type="text" name="form-email" placeholder="Email Address..." className="form-email form-control" id="form-email" />
-                                </FormGroup>
-                                <FormGroup>
-                                    <Label className="sr-only" for="form-phone">Password</Label>
-                                        <Input type="text" name="form-phone" placeholder="Password..." className="form-phone form-control" id="form-phone" />
-                                </FormGroup>
-                                <FormGroup>
-                                    <Label className="sr-only" for="form-phone">Password</Label>
-                                        <Input type="text" name="form-phone" placeholder="Confirm Password..." className="form-phone form-control" id="form-phone" />
-                                <Button type="submit" className="btn mt-4" size="lg">Sign me up</Button>
-                                </FormGroup>
-                            </Form>
-                        </div>
+                            <div className="hero-img wow fadeInUp">
+                            <img src="https://s3.amazonaws.com/garage-images-app/car.png" alt="Hero Image"/>
+                          </div>
                     </div>
                 </div>
-            </div>
             </div>
             )
     }
 
 }
+
+Register.propTypes = {
+    registerUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+    // errors: PropTypes.object.isRequired
+  };
+  
+  const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+  });
+  
+  export default connect(
+    mapStateToProps,
+    { registerUser }
+  )(withRouter(Register));
+  
