@@ -61,13 +61,15 @@ class Register extends Component {
       <div className="form-group">
         <Row className="padding-top-150-px">
           <Col md="8" className="signup-form">
+          <Button>
             <Link to="/" className="btn-flat waves-effect">
               <i className="fa-long-arrow-left"></i> Back to
               home
             </Link>
+            </Button>
             <Col md="12">
               <h4 className="mt-3">
-                <b>Register</b> below
+                <b>Register</b> below <br />
               </h4>
               <p className="mt-3">
                 Already have an account? <Link to="/login">Log in</Link>
