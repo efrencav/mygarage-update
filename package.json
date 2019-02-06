@@ -1,11 +1,11 @@
 {
-  "name": "react-mygarage-application",
-  "version": "1.0.0",
+  "name": "mygarage-update",
+  "version": "1.1",
   "engines": {
     "node": "10.6.0",
     "yarn": "1.12.3"
   },
-  "description": "React MyGarage Application",
+  "description": "My Garage Application",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && yarn start:prod || yarn start:dev",
@@ -16,7 +16,7 @@
     "build": "cd client && yarn build",
     "heroku-postbuild": "yarn build"
   },
-  "author": "",
+  "author": "Efren Cavazos and Miguel Trujillo",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
@@ -26,14 +26,15 @@
     "if-env": "^1.0.4",
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.3.0",
+    "moment": "^2.24.0",
     "mongoose": "^5.3.16",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
+    "react-addons-shallow-compare": "^15.6.0",
+    "react-dates": "^12.7.0",
     "react-materialize": "^2.6.0",
     "reactstrap": "^7.1.0",
-    "validator": "^10.9.0",
-    "moment": "^2.24.0",
-    "react-addons-shallow-compare": "^15.6.0",
-    "react-dates": "^12.7.0"
-  }
+    "validator": "^10.9.0"
+  },
+  "repository": "git@github.com:efrencav/mygarage-update.git"
 }
