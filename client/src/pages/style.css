@@ -2515,3 +2515,14 @@ textarea.form-control {
 .large-text {
 	font-size: 40px;
 }
+.medium-text {
+	font-size: 30px;
+}
+
+.card-body {
+	text-align: left;
+}
+
+.text-turquoise {
+	color: #1ea69a;
+}

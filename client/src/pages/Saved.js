@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { List } from "../components/List";
+import "./style.css";
+
 
 class Saved extends Component {
   state = {
@@ -51,7 +53,7 @@ class Saved extends Component {
               <h1 className="text-center">
                 <strong>(React) VIN Number Car Search</strong>
               </h1>
-              <h2 className="text-center">Search for and Save Cars of your Interest.</h2>
+              <h2 className="text-center text-turquoise">Search for and Save Cars of your Interest.</h2>
             </Jumbotron>
           </Col>
         </Row>
@@ -85,7 +87,7 @@ class Saved extends Component {
                   ))}
                 </List>
               ) : (
-                <h2 className="text-center">No Saved Books</h2>
+                <h2 className="text-center medium-text ">No Saved Cars</h2>
               )}
             </Card>
           </Col>
