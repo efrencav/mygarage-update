@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
-import { Container, Button, Form, Label, Input, Col, Row } from "reactstrap";
-import SectionHeaderHome from "../../components/layout/SectionHeaderHome";
+import { Container, Button, Form, Label, Input, Col, Row, FormGroup } from "reactstrap";
+import "./style.css";
 
 
 class Register extends Component {
@@ -56,24 +56,27 @@ class Register extends Component {
     const { errors } = this.state;
 
     return (
-      <SectionHeaderHome>
+      
       <Container className="hero-img">
-        <Row style={{ marginTop: "4rem" }}>
+      <div className="form-group">
+        <Row className="padding-top-150-px">
           <Col md="8" className="signup-form">
+          <Button>
             <Link to="/" className="btn-flat waves-effect">
               <i className="fa-long-arrow-left"></i> Back to
               home
             </Link>
-            <Col md="12" style={{ paddingLeft: "11.250px" }}>
+            </Button>
+            <Col md="12">
               <h4 className="mt-3">
-                <b>Register</b> below
+                <b>Register</b> below <br />
               </h4>
               <p className="mt-3">
                 Already have an account? <Link to="/login">Log in</Link>
               </p>
             </Col>
             <Form noValidate onSubmit={this.onSubmit}>
-              <Col md="12" className="input-field">
+              <FormGroup>
                 <Input
                   onChange={this.onChange}
                   value={this.state.name}
@@ -84,10 +87,10 @@ class Register extends Component {
                     invalid: errors.name
                   })}
                 />
-                <label htmlFor="name" className="mt-3">Name</label>
+                <label htmlFor="name" className="signup-form" placeholder="Enter Your Name..." >Your Name</label>
                 <span className="text-danger">{errors.name}</span>
-              </Col>
-              <Col md="12" className="input-field">
+              </FormGroup>
+              <FormGroup>
                 <Input
                   onChange={this.onChange}
                   value={this.state.email}
@@ -98,10 +101,10 @@ class Register extends Component {
                     invalid: errors.email
                   })}
                 />
-                <Label htmlFor="email" className="mt-3">Email</Label>
+                <Label htmlFor="email" className="signup-form" placeholder="Enter Your Email..." >Email</Label>
                 <span className="text-danger">{errors.email}</span>
-              </Col>
-              <Col md="12" className="input-field">
+              </FormGroup>
+              <FormGroup>
                 <Input
                   onChange={this.onChange}
                   value={this.state.password}
@@ -112,10 +115,10 @@ class Register extends Component {
                     invalid: errors.password
                   })}
                 />
-                <Label htmlFor="password" className="mt-3">Password</Label>
+                <Label htmlFor="password" className="signup-form" placeholder="Enter Your Password..." >Password</Label>
                 <span className="text-danger">{errors.password}</span>
-              </Col>
-              <Col md="12" className="input-field">
+              </FormGroup>
+              <FormGroup>
                 <Input
                   onChange={this.onChange}
                   value={this.state.password2}
@@ -126,10 +129,10 @@ class Register extends Component {
                     invalid: errors.password2
                   })}
                 />
-                <Label htmlFor="password2" className="mt-3">Confirm Password</Label>
+                <Label htmlFor="password2" className="signup-form" placeholder="Enter Your Email..." >Password Confirmation</Label>
                 <span className="text-danger">{errors.password2}</span>
-              </Col>
-              <Col md="12" style={{ paddingLeft: "11.250px" }}>
+              </FormGroup>
+              <Col md="12">
                 <Button
                   style={{
                     width: "150px",
@@ -146,8 +149,8 @@ class Register extends Component {
             </Form>
           </Col>
         </Row>
+        </div>  
       </Container>
-      </SectionHeaderHome>
     );
   }
 }

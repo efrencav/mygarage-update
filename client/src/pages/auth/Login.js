@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
-import { Container, Form, Button, Label, Input, Col, Row } from "reactstrap";
+import { Container, Form, Button, Label, Input, Col, Row, FormGroup  } from "reactstrap";
 // import Jumbotron from "../../components/Jumbotron";
 import "./style.css";
 
@@ -57,24 +57,25 @@ class Login extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="container-b">
-      <Container>
-        <Row style={{ marginTop: "4rem" }}>
-          <Col md="8">
-            <Link to="/" className="btn-flat waves-effect">
-              <i className="fa-long-arrow-left"></i> Back to
-              home
+      <Container className="hero-img">
+        <div className="form-group">
+        <Row className="padding-top-150-px">
+          <Col md="8" className="signup-form">
+          <Button>
+            <Link to="/">
+              Back to home
             </Link>
-            <Row md="12" style={{ paddingLeft: "11.250px" }}>
+            </Button>
+            <Col md="12">
               <h4 className="mt-3">
-                <b>Login</b> below
+                <b>Login</b> below <br />
               </h4>
               <p className="mt-3">
                 Don't have an account? <Link to="/register">Register</Link>
               </p>
-            </Row>
+            </Col>
             <Form noValidate onSubmit={this.onSubmit}>
-              <Col md="12" className="input-field mt-3">
+              <FormGroup className="input-field">
                 <Input
                   onChange={this.onChange}
                   value={this.state.email}
@@ -90,8 +91,8 @@ class Login extends Component {
                   {errors.email}
                   {errors.emailnotfound}
                 </span>
-              </Col>
-              <Col md="12" className="input-field mt-3">
+              </FormGroup>
+              <FormGroup>
                 <Input
                   onChange={this.onChange}
                   value={this.state.password}
@@ -107,8 +108,8 @@ class Login extends Component {
                   {errors.password}
                   {errors.passwordincorrect}
                 </span>
-              </Col>
-              <Col md="12" style={{ paddingLeft: "11.250px" }}>
+              </FormGroup>
+              <Col md="12">
                 <Button
                   style={{
                     width: "150px",
@@ -125,8 +126,8 @@ class Login extends Component {
             </Form>
           </Col>
         </Row>
-        </Container>
         </div>
+        </Container>
     );
   }
 }

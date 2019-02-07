@@ -1473,9 +1473,9 @@ body {
 
 .yd-reviews {
 	padding: 100px 0 100px 0;
-	background: #FFFFFF;
-	background: rgba(30, 166, 154, 0.08);
-	background: #f8faff;
+	/* background: #FFFFFF; */
+	background: rgba(30, 166, 154, 0.8) !important;
+	/* background: #f8faff; */
 	background-size: cover;
 }
 
@@ -2510,4 +2510,8 @@ textarea.form-control {
 
 .padding-top-150-px {
     padding-top: 150px;
+}
+
+.large-text {
+	font-size: 40px;
 }
