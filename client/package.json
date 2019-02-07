@@ -17,6 +17,9 @@
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
   },
+  "resolutions": {
+    "terser": "3.14.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
