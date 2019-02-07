@@ -105,9 +105,7 @@ export default class Maintenance extends Component {
         const car = this.state.cars;
         console.log(car._id);
         console.log(car.maintenance);
-        this.setState((prevState) => ({ 
-            maintenance: car.maintenance.filter((option) => optionToRemove !== option)
-        }));
+        
         
     }
 
