@@ -105,14 +105,17 @@ export default class Maintenance extends Component {
         const car = this.state.cars;
         console.log(car._id);
         console.log(car.maintenance);
+        this.setState((prevState) => ({ 
+            maintenance: car.maintenance.filter((option) => optionToRemove !== option)
+        }));
         
     }
 
 
       render() {
           return(
-              <div>
-              
+              <div className="car padding-top-150-px">
+              <div className='signup-form'>
               <h1>{this.state.cars.year} {this.state.cars.make} {this.state.cars.model}</h1>
               <h2>Add Maintenance</h2>
               <form onSubmit={this.handleAddMaintenance}>
@@ -163,7 +166,7 @@ export default class Maintenance extends Component {
               )
               }
 
-              
+              </div>
               </div>
           )
       }

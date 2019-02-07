@@ -93,9 +93,9 @@ class Home extends Component {
               <h1 className="text-center">
               <b>Hey there,</b> {user.name.split(" ")[0]}<br />
                 </h1><br />
-                <h2 className="text-center">(React) Car VIN Search</h2>
+                <h2 className="text-center text-turquoise">(React) Car VIN Search</h2>
 
-              <h2 className="text-center">Search for and Save Cars of Interest.</h2>
+              <h2 className="text-center text-turquoise">Search for and Save Cars of Interest.</h2>
             </Jumbotron>
           </Col>
           <Col size="md-12" className="intro-block">
@@ -119,7 +119,7 @@ class Home extends Component {
                       Button={() => (
                         <Button
                           onClick={() => this.handleCarSave()}
-                          className="btn ml-2"
+                          className="btn mt-2"
                         >
                           Save
                         </Button>

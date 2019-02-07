@@ -13,10 +13,10 @@ export default class SectionServices extends React.Component {
                     <Row className="justify-center">
                         <Col md="8">
                             <div className="service-intro text-center">
-                                <h1>Designed for startups to excel.</h1>
+                                <h1>Designed for the common car owner</h1>
                                 <p>
                                 Best in class big data software and analytics services will render your huge chunks into meaningful
-                                data. Try the demo now.
+                                data.
                                 </p>
                             </div>
                         </Col>
@@ -30,7 +30,7 @@ export default class SectionServices extends React.Component {
                                     </div>
                                 </div>
                                 <div className="card-text">
-                                    <h3>Built-in Camera</h3>
+                                    <h3>VIN Number</h3>
                                     <p>Lorem Ipsum and something that can look good here. Lorem Ipsum and something that can look good here.</p>
                                 </div>
                             </div>
@@ -43,7 +43,7 @@ export default class SectionServices extends React.Component {
                                     </div>
                                 </div>
                                 <div className="card-text">
-                                    <h3>Encrypted</h3>
+                                    <h3>Add Maintenance</h3>
                                     <p>Lorem Ipsum and something that can look good here. Lorem Ipsum and something that can look good here.</p>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@ export default class SectionServices extends React.Component {
                                     </div>
                                 </div>
                                 <div className="card-text">
-                                    <h3>Cross-Browser</h3>
+                                    <h3>Keep All of Your Records</h3>
                                     <p>Lorem Ipsum and something that can look good here. Lorem Ipsum and something that can look good here.</p>
                                 </div>
                             </div>
