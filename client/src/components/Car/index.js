@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 
 const Car = ({ car, Button }) => (
-  <div>
+  <div className='carComponent'>
     <h1>{car.year} {car.make} {car.model}</h1>
     <p>Drivetrain: {car.drivetrain}</p>
     <p>Trim: {car.trim}</p>
