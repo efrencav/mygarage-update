@@ -12,6 +12,7 @@ import API from "../utils/API";
 import { Col, Row, Container } from "../components/Grid";
 import { Button } from "reactstrap";
 import Nav from "../components/Nav/landingNav";
+import "./style.css";
 
 
 
@@ -98,7 +99,9 @@ class Home extends Component {
             </Jumbotron>
           </Col>
           <Col size="md-12" className="intro-block">
-            <Card title="Car Search" icon="far fa-car">
+            <Card title="Car Search" icon="far fa-car" style={{
+              background: 'rgba(30, 166, 154, 0.8)'
+            }}>
               <Form
                 handleInputChange={this.handleInputChange}
                 handleFormSubmit={this.handleFormSubmit}

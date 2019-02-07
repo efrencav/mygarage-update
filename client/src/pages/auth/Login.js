@@ -63,8 +63,7 @@ class Login extends Component {
           <Col md="8" className="signup-form">
           <Button>
             <Link to="/">
-              <i></i> Back to
-              home
+              Back to home
             </Link>
             </Button>
             <Col md="12">
@@ -76,7 +75,7 @@ class Login extends Component {
               </p>
             </Col>
             <Form noValidate onSubmit={this.onSubmit}>
-              <FormGroup>
+              <FormGroup className="input-field">
                 <Input
                   onChange={this.onChange}
                   value={this.state.email}
